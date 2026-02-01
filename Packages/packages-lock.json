@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.cometout.editortools": {
+    "com.cometout.ruletexturemaker": {
       "version": "file:RuleTextureMaker",
       "depth": 0,
       "source": "embedded",

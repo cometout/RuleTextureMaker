@@ -1,0 +1,17 @@
+{
+  "name": "com.cometout.ruletexturemaker",
+  "displayName": "RuleTextureMaker",
+  "version": "1.0.0",
+  "unity": "6000.2",
+  "description": "A Unity package that provides node-based tools built with GraphToolkit for creating rule images commonly used in transition effects.",
+  "author": {
+    "name": "CometOut"
+  },
+  "samples":[
+    {
+      "displayName": "RuleTextureGraph-Sample",
+      "description": "ルール画像をGraphToolkitで作成するサンプル",
+      "path": "RuleTextureMaker/Samples~/RuleTextureSample"
+    }
+  ]
+}
