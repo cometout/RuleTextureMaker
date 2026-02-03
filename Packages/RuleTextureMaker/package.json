@@ -11,7 +11,7 @@
     {
       "displayName": "RuleTextureGraph-Sample",
       "description": "ルール画像をGraphToolkitで作成するサンプル",
-      "path": "RuleTextureMaker/Samples~/RuleTextureSample"
+      "path": "Samples~/RuleTextureSample"
     }
   ]
 }

@@ -10,6 +10,11 @@ namespace Cometout.EditorTools.RuleTextureMaker
     {
         const string k_outputTextureAssetIdName = "OutputRuleTexture";
 
+        [SerializeField] TextureWrapMode m_wrapMode = TextureWrapMode.Repeat;
+        [SerializeField] FilterMode m_filterMode = FilterMode.Bilinear;
+        [Range(0, 16)]
+        [SerializeField] int m_anisoLevel = 1;
+
         Texture2D m_outputTexture;
 
         public override void OnImportAsset(AssetImportContext ctx)
@@ -40,7 +45,7 @@ namespace Cometout.EditorTools.RuleTextureMaker
                 var texture = outputTextureNode.CreateTexture(graph);
                 if (texture != null)
                 {
-                    m_outputTexture = new Texture2D(texture.width, texture.height);
+                    m_outputTexture = CreateTexture(texture.width, texture.height);
                     m_outputTexture.SetPixels(texture.GetPixels());
                 }
             }
@@ -54,14 +59,17 @@ namespace Cometout.EditorTools.RuleTextureMaker
 
         }
 
-        static Texture2D CreateTexture(int width, int height)
+        Texture2D CreateTexture(int width, int height)
         {
             width  = Mathf.Max(width, 1);
             height = Mathf.Max(height, 1);
 
-            return new Texture2D(width, height, TextureFormat.ARGB32, false)
+            return new Texture2D(width, height, TextureFormat.RGB24, true)
             {
-                name = k_outputTextureAssetIdName
+                name       = k_outputTextureAssetIdName,
+                wrapMode   = m_wrapMode,
+                filterMode = m_filterMode,
+                anisoLevel = m_anisoLevel,
             };
         }
     }

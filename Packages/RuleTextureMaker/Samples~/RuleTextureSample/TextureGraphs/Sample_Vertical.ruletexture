@@ -228,7 +228,7 @@ MonoBehaviour:
     - rid: 1650314756320919565
       type: {class: 'Constant`1[[System.Int32, mscorlib]]', ns: Unity.GraphToolkit.Editor, asm: Unity.GraphToolkit.Internal.Editor}
       data:
-        m_Value: 256
+        m_Value: 512
     - rid: 1650314756320919567
       type: {class: VariableDeclarationModel, ns: Unity.GraphToolkit.Editor, asm: Unity.GraphToolkit.Internal.Editor}
       data:
@@ -255,7 +255,7 @@ MonoBehaviour:
     - rid: 1650314756320919568
       type: {class: 'Constant`1[[System.Int32, mscorlib]]', ns: Unity.GraphToolkit.Editor, asm: Unity.GraphToolkit.Internal.Editor}
       data:
-        m_Value: 256
+        m_Value: 512
     - rid: 1650314756320919569
       type: {class: VariableNodeModelImp, ns: Unity.GraphToolkit.Editor.Implementation, asm: Unity.GraphToolkit.Editor}
       data:
