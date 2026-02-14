@@ -2,11 +2,11 @@ using UnityEngine;
 
 namespace Cometout.EditorTools.RuleTextureMaker
 {
-    public class Normalize : OperatorNodeBase
+    public class OneMinusNode : OperatorNodeBase
     {
         protected override float GetResult(float a)
         {
-            return Mathf.Clamp01(a);
+            return 1 - a;
         }
     }
 }

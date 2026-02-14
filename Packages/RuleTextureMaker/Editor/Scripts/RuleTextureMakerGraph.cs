@@ -46,34 +46,24 @@ namespace Cometout.EditorTools.RuleTextureMaker
         {
             var sourcePort = port.firstConnectedPort;
 
-            switch (sourcePort?.GetNode())
+            return (sourcePort?.GetNode()) switch
             {
-            // 定数ノード
-            case IConstantNode constantNode
-                when constantNode.TryGetValue(out T constantValue):
-                return constantValue;
-
-            // 変数ノード
-            case IVariableNode variableNode
-                when variableNode.variable.TryGetDefaultValue(out T variableValue):
-                return variableValue;
-
-            //
-            case IValueNode valueNode
-                when typeof(T).IsAssignableFrom(typeof(float)):
-                return (T)(object)valueNode.GetValue(sourcePort.name);
-
-            // 
-            case IOperatorNode operatorNode
-                when typeof(T).IsAssignableFrom(typeof(int))
-                ||   typeof(T).IsAssignableFrom(typeof(float)) :
-                return (T)(object)operatorNode.Calculate();
-
-            // ポートがつながっていないので、直で設定している値を取得する
-            case null when port.TryGetValue<T>(out var value):
-                return value;
-            }
-            return default;
+                // 定数ノード
+                IConstantNode constantNode
+                         when constantNode.TryGetValue(out T constantValue) => constantValue,
+                // 変数ノード
+                IVariableNode variableNode
+                         when variableNode.variable.TryGetDefaultValue(out T variableValue) => variableValue,
+                IValueNode valueNode
+                         when typeof(T).IsAssignableFrom(typeof(float)) => (T)(object)valueNode.GetValue(sourcePort.name),
+                IOperatorNode operatorNode
+                         when typeof(T).IsAssignableFrom(typeof(int))
+                           || typeof(T).IsAssignableFrom(typeof(float)) => (T)(object)operatorNode.Calculate(),
+                // ポートがつながっていないので、直で設定している値を取得する
+                null when port.TryGetValue<T>(out var value) => value,
+                
+                _ => default,
+            };
         }
     }
 }

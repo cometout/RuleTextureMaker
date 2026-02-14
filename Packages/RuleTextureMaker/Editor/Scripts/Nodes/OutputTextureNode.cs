@@ -11,7 +11,7 @@ namespace Cometout.EditorTools.RuleTextureMaker
         const string k_widthInputName  = "Width";
         const string k_heightInputName = "Height";
 
-        const string k_fomulaInputName = "Fomula";
+        const string k_formulaInputName = "Formula";
 
         protected override void OnDefinePorts(IPortDefinitionContext context)
         {
@@ -25,7 +25,7 @@ namespace Cometout.EditorTools.RuleTextureMaker
                 .Build();
 
             context
-                .AddInputPort<float>(k_fomulaInputName)
+                .AddInputPort<float>(k_formulaInputName)
                 .Build();
         }
 
@@ -41,13 +41,14 @@ namespace Cometout.EditorTools.RuleTextureMaker
             //
             var nodes = graph.GetNodes();
             var valueNodes = nodes
-                .OfType<ValueNode>()
+                .OfType<GetPixelNode>()
                 .ToArray();
             var normalizedValueNodes = nodes
-                .OfType<NormalizeValueNode>()
+                .OfType<GetPixelNormalizedValueNode>()
                 .ToArray();
 
             var texture = new Texture2D(width, height);
+            var colors = new Color32[width * height];
             for (int y = 0; y < height; y++)
             {
                 SetNormalizeY(valueNodes, y);
@@ -57,11 +58,11 @@ namespace Cometout.EditorTools.RuleTextureMaker
                     SetNormalizeX(valueNodes, x);
                     SetNormalizeX(normalizedValueNodes, (float)x /  width);
                     float value = RuleTextureMakerGraph
-                        .ResolvePortValue<float>(GetInputPortByName(k_fomulaInputName));
-
-                    texture.SetPixel(x, y, new Color(value, value, value, a: 1f));
+                        .ResolvePortValue<float>(GetInputPortByName(k_formulaInputName));
+                    colors[x + (y * width)] = new Color(value, value, value, a: 1f);
                 }
             }
+            texture.SetPixels32(colors);
             texture.Apply();
             return texture;
         }

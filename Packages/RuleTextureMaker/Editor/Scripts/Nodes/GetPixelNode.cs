@@ -1,11 +1,10 @@
 using System;
 using Unity.GraphToolkit.Editor;
-using UnityEngine;
 
 namespace Cometout.EditorTools.RuleTextureMaker
 {
     [Serializable]
-    public class NormalizeValueNode : Node, IValueNode
+    public class GetPixelNode : Node, IValueNode
     {
         const string k_xOutputName = "x";
         const string k_yOutputName = "y";
@@ -22,12 +21,12 @@ namespace Cometout.EditorTools.RuleTextureMaker
 
         public void SetX(float x)
         {
-            m_x = Mathf.Clamp01(x);
+            m_x = x;
         }
 
         public void SetY(float y)
         {
-            m_y = Mathf.Clamp01(y);
+            m_y = y;
         }
 
         public float GetValue(string portName)
@@ -36,7 +35,7 @@ namespace Cometout.EditorTools.RuleTextureMaker
             {
                 k_xOutputName => m_x,
                 k_yOutputName => m_y,
-                _             => 0f
+                _ => 0f
             };
         }
     }

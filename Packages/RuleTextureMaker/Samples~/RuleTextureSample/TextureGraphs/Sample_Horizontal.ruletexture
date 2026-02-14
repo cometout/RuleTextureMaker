@@ -33,11 +33,11 @@ MonoBehaviour:
         - rid: 1650314756320919558
         - rid: 1650314756320919569
         - rid: 1650314756320919570
-        - rid: 1650314756320919573
+        - rid: 5493635298395160836
         m_GraphWireModels:
         - rid: 1650314756320919571
         - rid: 1650314756320919572
-        - rid: 1650314756320919574
+        - rid: 5493635299453698128
         m_GraphStickyNoteModels: []
         m_GraphPlacematModels: []
         m_GraphVariableModels:
@@ -49,10 +49,10 @@ MonoBehaviour:
         m_LocalSubgraphs: []
         m_LastKnownBounds:
           serializedVersion: 2
-          x: 251
+          x: 158
           y: 298
-          width: 544
-          height: 273
+          width: 636
+          height: 238
         m_GraphElementMetaData:
         - m_Guid:
             m_Value0: 368060838627913513
@@ -111,19 +111,19 @@ MonoBehaviour:
           m_Category: 2
           m_Index: 1
         - m_Guid:
-            m_Value0: 1398054043574459437
-            m_Value1: 13908807201730502826
+            m_Value0: 16641318060578411726
+            m_Value1: 9422091442098324349
           m_HashGuid:
             serializedVersion: 2
-            Hash: 2ddc0dd4bee26613aaa08a3c750206c1
+            Hash: ce94114b9bd6f1e67dc384073ffec182
           m_Category: 0
           m_Index: 3
         - m_Guid:
-            m_Value0: 14380497996361100199
-            m_Value1: 2401274792484052105
+            m_Value0: 8648024347818400885
+            m_Value1: 7061520078618979649
           m_HashGuid:
             serializedVersion: 2
-            Hash: a7eb518ebcca91c7899c1c86b30a5321
+            Hash: 751ca53c53f40378416d5f14198fff61
           m_Category: 2
           m_Index: 2
         m_EntryPoint:
@@ -167,11 +167,11 @@ MonoBehaviour:
           m_KeyList:
           - Width
           - Height
-          - Fomula
+          - Formula
           m_ValueList:
           - rid: 1650314756320919559
           - rid: 1650314756320919560
-          - rid: 1650314756320919561
+          - rid: 5493635299453698127
         m_InputPortInfos:
           expandedPortsById:
             m_KeyList: []
@@ -195,10 +195,6 @@ MonoBehaviour:
       type: {class: 'Constant`1[[System.Int32, mscorlib]]', ns: Unity.GraphToolkit.Editor, asm: Unity.GraphToolkit.Internal.Editor}
       data:
         m_Value: 16
-    - rid: 1650314756320919561
-      type: {class: 'Constant`1[[System.Single, mscorlib]]', ns: Unity.GraphToolkit.Editor, asm: Unity.GraphToolkit.Internal.Editor}
-      data:
-        m_Value: 0
     - rid: 1650314756320919562
       type: {class: OutputTextureNode, ns: Cometout.EditorTools.RuleTextureMaker, asm: Cometout.EditorTools.RuleTextureMaker.Editor}
       data: 
@@ -394,17 +390,17 @@ MonoBehaviour:
           m_PortDirection: 1
           m_PortOrientation: 0
           m_Title: Height
-    - rid: 1650314756320919573
+    - rid: 5493635298395160836
       type: {class: UserNodeModelImp, ns: Unity.GraphToolkit.Editor.Implementation, asm: Unity.GraphToolkit.Editor}
       data:
         m_Guid:
-          m_Value0: 1398054043574459437
-          m_Value1: 13908807201730502826
+          m_Value0: 16641318060578411726
+          m_Value1: 9422091442098324349
         m_HashGuid:
           serializedVersion: 2
-          Hash: 2ddc0dd4bee26613aaa08a3c750206c1
+          Hash: ce94114b9bd6f1e67dc384073ffec182
         m_Version: 2
-        m_Position: {x: 251.08694, y: 459.5652}
+        m_Position: {x: 158, y: 424.5}
         m_Title: 
         m_Tooltip: 
         m_NodePreviewModel:
@@ -427,24 +423,31 @@ MonoBehaviour:
           m_Color: {r: 0, g: 0, b: 0, a: 0}
           m_HasUserColor: 0
         m_Node:
-          rid: 1650314756320919575
-    - rid: 1650314756320919574
+          rid: 5493635298395160837
+    - rid: 5493635298395160837
+      type: {class: GetPixelNormalizedValueNode, ns: Cometout.EditorTools.RuleTextureMaker, asm: Cometout.EditorTools.RuleTextureMaker.Editor}
+      data: 
+    - rid: 5493635299453698127
+      type: {class: 'Constant`1[[System.Single, mscorlib]]', ns: Unity.GraphToolkit.Editor, asm: Unity.GraphToolkit.Internal.Editor}
+      data:
+        m_Value: 0
+    - rid: 5493635299453698128
       type: {class: WireModel, ns: Unity.GraphToolkit.Editor, asm: Unity.GraphToolkit.Internal.Editor}
       data:
         m_Guid:
-          m_Value0: 14380497996361100199
-          m_Value1: 2401274792484052105
+          m_Value0: 8648024347818400885
+          m_Value1: 7061520078618979649
         m_HashGuid:
           serializedVersion: 2
-          Hash: a7eb518ebcca91c7899c1c86b30a5321
+          Hash: 751ca53c53f40378416d5f14198fff61
         m_Version: 2
         m_FromPortReference:
           m_NodeModelGuid:
-            m_Value0: 1398054043574459437
-            m_Value1: 13908807201730502826
+            m_Value0: 16641318060578411726
+            m_Value1: 9422091442098324349
           m_NodeModelHashGuid:
             serializedVersion: 2
-            Hash: 2ddc0dd4bee26613aaa08a3c750206c1
+            Hash: ce94114b9bd6f1e67dc384073ffec182
           m_UniqueId: x
           m_PortDirection: 2
           m_PortOrientation: 0
@@ -456,10 +459,7 @@ MonoBehaviour:
           m_NodeModelHashGuid:
             serializedVersion: 2
             Hash: 292f26f6619d1b05fae5645db82d2776
-          m_UniqueId: Fomula
+          m_UniqueId: Formula
           m_PortDirection: 1
           m_PortOrientation: 0
-          m_Title: Fomula
-    - rid: 1650314756320919575
-      type: {class: NormalizeValueNode, ns: Cometout.EditorTools.RuleTextureMaker, asm: Cometout.EditorTools.RuleTextureMaker.Editor}
-      data: 
+          m_Title: Formula

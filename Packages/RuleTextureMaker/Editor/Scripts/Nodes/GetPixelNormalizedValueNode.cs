@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Cometout.EditorTools.RuleTextureMaker
 {
     [Serializable]
-    public class ValueNode : Node, IValueNode
+    public class GetPixelNormalizedValueNode : Node, IValueNode
     {
         const string k_xOutputName = "x";
         const string k_yOutputName = "y";
@@ -22,12 +22,12 @@ namespace Cometout.EditorTools.RuleTextureMaker
 
         public void SetX(float x)
         {
-            m_x = x;
+            m_x = Mathf.Clamp01(x);
         }
 
         public void SetY(float y)
         {
-            m_y = y;
+            m_y = Mathf.Clamp01(y);
         }
 
         public float GetValue(string portName)
@@ -36,7 +36,7 @@ namespace Cometout.EditorTools.RuleTextureMaker
             {
                 k_xOutputName => m_x,
                 k_yOutputName => m_y,
-                _ => 0f
+                _             => 0f
             };
         }
     }
