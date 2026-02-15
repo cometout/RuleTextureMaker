@@ -52,7 +52,6 @@ MonoBehaviour:
         - rid: 5493635161520341016
         - rid: 5493635298395160643
         - rid: 5493635299453698110
-        - rid: -2
         - rid: 5493635410031280259
         m_GraphWireModels:
         - rid: 5493635115516428557
@@ -78,8 +77,6 @@ MonoBehaviour:
         - rid: 5493635299453698115
         - rid: 5493635299453698116
         - rid: 5493635299453698117
-        - rid: -2
-        - rid: -2
         - rid: 5493635410031280262
         - rid: 5493635410031280263
         m_GraphStickyNoteModels: []
@@ -480,37 +477,13 @@ MonoBehaviour:
           m_Category: 2
           m_Index: 22
         - m_Guid:
-            m_Value0: 11509191538435306428
-            m_Value1: 1397499634480003923
-          m_HashGuid:
-            serializedVersion: 2
-            Hash: bc335ed4b9dcb89f533beb6683ea6413
-          m_Category: 0
-          m_Index: 22
-        - m_Guid:
-            m_Value0: 5482551596876641588
-            m_Value1: 7300539266997200053
-          m_HashGuid:
-            serializedVersion: 2
-            Hash: 3435952aa1ef154cb5a4288ec8b95065
-          m_Category: 2
-          m_Index: 23
-        - m_Guid:
-            m_Value0: 4022174628438101306
-            m_Value1: 7401663201332727555
-          m_HashGuid:
-            serializedVersion: 2
-            Hash: 3a4da4a083a2d137038f844677fdb766
-          m_Category: 2
-          m_Index: 24
-        - m_Guid:
             m_Value0: 13715350355000351036
             m_Value1: 15936591172861992014
           m_HashGuid:
             serializedVersion: 2
             Hash: 3cd9d2177bb656be4e9c106d3c252add
           m_Category: 0
-          m_Index: 23
+          m_Index: 22
         - m_Guid:
             m_Value0: 3046739040354413914
             m_Value1: 222440850655632151
@@ -518,7 +491,7 @@ MonoBehaviour:
             serializedVersion: 2
             Hash: 5aada3cf0331482a175bdd6ec6441603
           m_Category: 2
-          m_Index: 25
+          m_Index: 23
         - m_Guid:
             m_Value0: 12982017317731654904
             m_Value1: 8617256970215116172
@@ -526,7 +499,7 @@ MonoBehaviour:
             serializedVersion: 2
             Hash: f85c5d03f86329b48c4deee78ea59677
           m_Category: 2
-          m_Index: 26
+          m_Index: 24
         m_EntryPoint:
           rid: 5493635115516428487
         m_Graph:
