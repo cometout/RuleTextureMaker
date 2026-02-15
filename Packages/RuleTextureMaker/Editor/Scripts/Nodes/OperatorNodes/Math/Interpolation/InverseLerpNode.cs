@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace Cometout.EditorTools.RuleTextureMaker
 {
+    [System.Serializable]
     public class InverseLerpNode : OperatorNodeBase3
     {
         protected override string CInputName { get; } = "value";

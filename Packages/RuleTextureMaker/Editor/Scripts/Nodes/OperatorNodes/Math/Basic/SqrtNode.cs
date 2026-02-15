@@ -1,9 +1,8 @@
-using System;
-using Unity.GraphToolkit.Editor;
 using UnityEngine;
 
 namespace Cometout.EditorTools.RuleTextureMaker
 {
+    [System.Serializable]
     public class SqrtNode : OperatorNodeBase
     {
         protected override float GetResult(float a)

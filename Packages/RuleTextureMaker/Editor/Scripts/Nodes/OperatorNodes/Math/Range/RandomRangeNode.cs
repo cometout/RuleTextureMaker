@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace Cometout.EditorTools.RuleTextureMaker
 {
+    [System.Serializable]
     public class RandomRangeNode : OperatorNodeBase3
     {
         protected override string AInputName { get; } = "Seed";

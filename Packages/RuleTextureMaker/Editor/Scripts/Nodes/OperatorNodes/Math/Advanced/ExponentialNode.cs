@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace Cometout.EditorTools.RuleTextureMaker
 {
+    [System.Serializable]
     public class ExponentialNode : OperatorNodeBase
     {
         public enum BaseType

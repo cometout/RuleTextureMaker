@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace Cometout.EditorTools.RuleTextureMaker
 {
+    [System.Serializable]
     public class ClampNode : OperatorNodeBase3
     {
         protected override string BInputName { get; } = "Min";

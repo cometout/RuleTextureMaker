@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace Cometout.EditorTools.RuleTextureMaker
 {
+    [System.Serializable]
     public class CurveNode : Node, IOperatorNode
     {
         const string k_aInputName = "A";

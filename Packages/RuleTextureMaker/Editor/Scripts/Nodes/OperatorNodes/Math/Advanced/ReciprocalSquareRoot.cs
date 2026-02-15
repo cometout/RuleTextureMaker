@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace Cometout.EditorTools.RuleTextureMaker
 {
+    [System.Serializable]
     public class ReciprocalSquareRoot : OperatorNodeBase
     {
         protected override float GetResult(float a)

@@ -1,7 +1,6 @@
-using UnityEngine;
-
 namespace Cometout.EditorTools.RuleTextureMaker
 {
+    [System.Serializable]
     public class StepNode : OperatorNodeBase2
     {
         protected override string AInputName { get; } = "Edge";
