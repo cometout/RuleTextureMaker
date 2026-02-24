@@ -44,7 +44,12 @@ namespace Cometout.EditorTools.RuleTextureMaker
 
         public static T ResolvePortValue<T>(IPort port)
         {
-            var sourcePort = port.firstConnectedPort;
+            var sourcePort
+#if UNITY_6000_4_OR_NEWER
+                = port.FirstConnectedPort;
+#else
+                = port.firstConnectedPort;
+#endif
 
             return (sourcePort?.GetNode()) switch
             {
@@ -53,9 +58,17 @@ namespace Cometout.EditorTools.RuleTextureMaker
                          when constantNode.TryGetValue(out T constantValue) => constantValue,
                 // 変数ノード
                 IVariableNode variableNode
+#if UNITY_6000_4_OR_NEWER
+                         when variableNode.Variable.TryGetDefaultValue(out T variableValue) => variableValue,
+#else
                          when variableNode.variable.TryGetDefaultValue(out T variableValue) => variableValue,
+#endif
                 IValueNode valueNode
+#if UNITY_6000_4_OR_NEWER
+                         when typeof(T).IsAssignableFrom(typeof(float)) => (T)(object)valueNode.GetValue(sourcePort.Name),
+#else
                          when typeof(T).IsAssignableFrom(typeof(float)) => (T)(object)valueNode.GetValue(sourcePort.name),
+#endif
                 IOperatorNode operatorNode
                          when typeof(T).IsAssignableFrom(typeof(int))
                            || typeof(T).IsAssignableFrom(typeof(float)) => (T)(object)operatorNode.Calculate(),
